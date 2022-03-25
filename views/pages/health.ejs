@@ -1,0 +1,18 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-healths"> 
+    <h2 class="main-h2"><%= name %></h2>
+    <section class="section section-health">
+        <% data.forEach(item => { %> 
+            <a href ="/health/<%= item.id %>">
+            <% console.log(item) %>
+            </a>
+            <p><%= item.long_name%></p>
+            <p><%= item.short_name %></p>
+            <p><%= item.id%></p>
+       <% }) %>
+    </section>
+</main>
+
+
+<%- include('../partials/footer'); %>
